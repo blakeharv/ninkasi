@@ -1,0 +1,24 @@
+<img src="<%= brew.imgMedium %>" class="brewery-logo" />
+
+<h2><%= brew.name %></h2>
+
+<p><%= brew.description %></p>
+
+<p><strong>Location: </strong><%= brew.locality %>, <%= brew.region %></p>
+
+<h4><%= brew.name %> Beers</h4>
+
+<ol>
+<% beerList.each do |beer| %>
+  <li>
+    <h5>
+    <% if beer.srmHex && beer.glassId %>
+      <div class="beer-glass" style="background-color: #<%= beer.srmHex %>;">
+        <img src="/img/beer_glasses/<%= beer.glassId %>.png" alt="<%= beer.glasName %>" />
+      </div>
+    <% end %>
+    <a href="/beer/<%= beer.id %>"><%= beer.name %></a></h5>
+  </li>
+  <!-- <p><%= beer.description %></p> -->
+<% end %>
+</ol>

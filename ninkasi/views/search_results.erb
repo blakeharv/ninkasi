@@ -1,0 +1,14 @@
+<h3>Search Results</h3>
+
+<div class="search-results">
+<% beerList.each do |beer| %>
+  <div class="result">
+    <% if beer.srmHex && beer.glassId %>
+      <div class="beer-glass" style="background-color: #<%= beer.srmHex %>;">
+        <img src="/img/beer_glasses/<%= beer.glassId %>.png" alt="<%= beer.glasName %>" />
+      </div>
+    <% end %>
+    <h5><a href="/beer/<%= beer.id %>"><%= beer.name %></a> | <%= beer.style %></h5>
+  </div>
+<% end %>
+</div>

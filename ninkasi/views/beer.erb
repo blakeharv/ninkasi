@@ -1,0 +1,33 @@
+<% if beer.srmHex && beer.glassId %>
+<div class="beer-glass" style="background-color: #<%= beer.srmHex %>;">
+  <img src="/img/beer_glasses/<%= beer.glassId %>.png" alt="<%= beer.glasName %>" />
+</div>
+<% end %>
+
+<h2><%= beer.name %></h2>
+
+<p><%= beer.description %></p>
+
+<ul>
+  <li><strong>Brewed at: </strong><a href="/brewery/<%= beer.breweryId %>"><%= brew.name %></a></li>
+  <li><strong>Brewed in: </strong><%= brew.locality %>, <%= brew.region %></li>
+  <li><strong>Category: </strong><%= beer.category %></li>
+  <li><strong>Style: </strong><%= beer.style %></li>
+  <li><strong>ABV: </strong><%= beer.abv %></li>
+  <li><strong>SRM: </strong><%= beer.srmId %></li>
+</ul>
+
+<h3 class="also-like">Ninkasi's suggestions for <%= beer.style %></h3>
+
+<div class="beer-suggestions">
+<% beerList.each do |beer| %>
+  <div class="suggestion">
+    <% if beer.srmHex && beer.glassId %>
+    <div class="beer-glass" style="background-color: #<%= beer.srmHex %>;">
+      <img src="/img/beer_glasses/<%= beer.glassId %>.png" alt="<%= beer.glasName %>" />
+    </div>
+    <% end %>
+    <h5><a href="/beer/<%= beer.id %>"><%= beer.name %></a> | <%= beer.breweryLocality %>, <%= beer.breweryRegion %></h5>
+  </div>
+<% end %>
+</div>

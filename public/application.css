@@ -1,0 +1,88 @@
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+
+
+body {
+  padding: 100px 30px 50px 30px;
+  background: url('/img/ninkasi-goddess.jpg') no-repeat top center;
+}
+
+header h1,
+header h1 a:hover {
+  text-align: center;
+  text-decoration: none;
+}
+
+header p {
+  text-align: center;
+}
+
+header {
+  border-bottom: 1px solid #FFCA5A;
+}
+
+.home-search {
+  padding-top: 30px;
+}
+
+.home-search .form-group {
+  width: 75%;
+}
+
+.home-search .btn {
+  width: 20%;
+}
+
+.search-result {
+  border-bottom: 1px solid #FFCA5A;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+  color: #BC6733;
+}
+
+.brewery-logo {
+  padding-top: 25px;
+}
+
+.also-like {
+  border-top: 1px solid #FFCA5A;
+  padding-top: 20px;
+}
+
+.beer-glass {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.beer-suggestions .beer-glass,
+.search-results .beer-glass,
+ol .beer-glass {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+
+.beer-suggestions .beer-glass img,
+.search-results .beer-glass img,
+ol .beer-glass img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+
+
